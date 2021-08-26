@@ -49,4 +49,19 @@
 		height: 68%;
 		width: 100%;
 	}
+
+	@media only screen and (min-width: 1440px) {
+		.top-bg {
+			height: 50vh;
+			margin-left: -25vw;
+			margin-top: -45vh;
+			border-bottom-left-radius: 20% 50%;
+		}
+
+		.other-bg {
+			top: 50vh;
+			height: 67%;
+			margin-left: -25vw;
+		}
+	}
 </style>

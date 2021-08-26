@@ -72,6 +72,26 @@
         margin-left: 0.5rem;
         color: hsl(225, 20%, 60%);
     }
+
+    @media only screen and (min-width: 1440px) {
+        .price {
+            position: absolute;
+            top: 1vh;
+            left: 28vw;
+        }
+
+        #big-money {
+            font-size: 3rem;
+        }
+
+        #month {
+            font-size: 1.5rem;
+        }
+
+        .slider {
+            margin-top: 4vh;
+        }
+    }
 </style>
 
 <div class="rangeslider">

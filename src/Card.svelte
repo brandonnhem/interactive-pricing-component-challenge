@@ -56,6 +56,34 @@
     svg {
         transform: scale(1.3);
     }
+
+    @media only screen and (min-width: 1440px) {
+        .card {
+            position: relative;
+            padding: 4vw;
+            text-align: left;
+            height: 44vh;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        hr {
+            width: 50vw;
+            margin-left: -4vw;
+        }
+
+        .row {
+            justify-content: flex-start;
+        }
+
+        #trial-btn {
+            position: absolute;
+            top: 43vh;
+            left: 33vw;
+        }
+    }
 </style>
 
 <main>

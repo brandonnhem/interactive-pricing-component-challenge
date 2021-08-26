@@ -46,7 +46,7 @@
     }
 
     .toggle:checked {
-        background-color: #4CD964;
+        background-color: hsl(174, 77%, 80%);
     }
 
     .toggle:checked:before {
@@ -64,6 +64,16 @@
         background-color: hsl(14, 92%, 95%);
         color: hsl(15, 100%, 70%);
     }
+
+    @media only screen and (min-width: 1440px) {
+        .discount {
+            padding: 5%;
+        }
+
+        p {
+            padding: 0 14px;
+        }
+    }
 </style>
 
 <div class="discount">
@@ -72,5 +82,9 @@
         <input class="toggle" type="checkbox">
     </label>
     <p>Yearly Billing</p>
-    <p id="discount-special">-25%</p>
+    {#if window.innerWidth >= 1440}
+        <p id="discount-special">-25% discount</p>
+    {:else}
+        <p id="discount-special">-25%</p>
+    {/if}
 </div>

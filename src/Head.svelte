@@ -30,6 +30,27 @@
         left: 22vw;
         transform: scale(1.2);
     }
+
+    @media only screen and (min-width: 1440px) {
+        header {
+            margin-top: -45vh;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.28rem;
+            font-weight: 600;
+        }
+
+        .background-circle {
+            top: 6vw;
+            left: 19vw;
+            transform: scale(1.3);
+        }
+    }
 </style>
 
 <header>
