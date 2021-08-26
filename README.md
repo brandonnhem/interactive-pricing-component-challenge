@@ -1,105 +1,94 @@
-# Frontend Mentor - Interactive pricing component
+# Frontend Mentor - Interactive pricing component solution
 
-![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this interactive pricing component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Use the slider and toggle to see prices for different page view numbers (details provided below)
+- Use the slider and toggle to see prices for different page view numbers
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Links
 
-### Page view and pricing totals
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-Here are the different page view ranges and the corresponding monthly price totals:
+## My process
 
-- 10K pageviews / $8 per month
-- 50K pageviews / $12 per month
-- 100K pageviews / $16 per month
-- 500k pageviews / $24 per month
-- 1M pageviews / $36 per month
+### Built with
 
-If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
+- Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
+- Svelte Framework
 
-## Where to find everything
+### What I learned
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+I felt like using Svelete was a bit overkill for this project, but I found it extremely easy and straightforward to use. It helped where I needed to use Javascript. Making each piece of the website its own component certainly helped as well ensuring that each piece is stylized appropiately. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+I wanted to talk a bit about how neat Svelte is. I was easily able to change the website based off the screen width. Check this out:
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```
+{#if window.innerWidth >= 1440}
+  <p id="discount-special">-25% discount</p>
+{:else}
+  <p id="discount-special">-25%</p>
+{/if}
+```
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+Same with the slider, I'm referencing a Javascript variable in my HTML. A big game changer if you ask me.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+```
+<script>
+  let range = 16;
 
-## Building your project
+  function handleSlide() {
+      range = this.value;
+  }
+</script>
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+<div class="price">
+  <p id="big-money">${range.toString() + '.00'}</p>
+  <p id="month">/ month</p>
+</div>
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Continued development
 
-## Deploying your project
+In future projects, I hope to continue using Svelte. I hope to do something a bit more ambitious with Javascript.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### Useful resources
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- [Customizing the input thumb](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) - I looked through so many examples and none were helping me until I found this resource. I'm not sure what made the gears start spinning but extracting bits here helped me get a better idea of what was happening.
+- [Creating the toggle switch](https://danklammer.com/articles/simple-css-toggle-switch/) - Shoutout to Dan Klammer creating this straight forward toggle switch.
+- [Using flex](flexboxfroggy.com) - I started using `display: flex` more in this project and I've finished the project faster by practicing on here.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+## Author
 
-## Create a custom `README.md`
+- GitHub - [Brandon Nhem](https://www.github.com/brandonnhem)
+- Frontend Mentor - [@brandonnhem](https://www.frontendmentor.io/profile/brandonnhem)
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Acknowledgments
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+Special thanks to ApplePieGiraffe on the Frontend Mentor Slack for providing guidance. For anyone out there worried about getting it right, here's some knowledge for you: 
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+**"Don't worry too much about your solution not matching up with the original design in the design preview perfectly—that isn't the main point of Frontend Mentor challenges and it's often a little more difficult and time-consuming than is worth it to get very accurate results."**
 
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+This has definitely helped me from pixel peeping to make sure it's just right.
