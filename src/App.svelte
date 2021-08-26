@@ -13,7 +13,7 @@
 
 <footer>
 	<div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+		Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8">Frontend Mentor</a>. 
 		Coded by <a href="https://github.com/brandonnhem">Brandon Nhem</a>.
 	</div>
 </footer>
