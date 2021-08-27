@@ -95,8 +95,8 @@
 </style>
 
 <div class="rangeslider">
-    <label for="Price per month">
-        <input type="range" min="1" max="32" value="16" class="slider" id="sliderRange" on:input={handleSlide}>
+    <label for="pricepermonth">
+        <input type="range" min="1" max="32" value="16" class="slider" id="sliderRange" on:input={handleSlide} aria-label="range slider">
     </label>
     <div class="price">
         <p id="big-money">${range.toString() + '.00'}</p>
