@@ -78,8 +78,8 @@
 
 <div class="discount">
     <p>Monthly Billing</p>
-    <label for="discount">
-        <input class="toggle" type="checkbox" aria-label="toggle discount">
+    <label for="toggle-switch">
+        <input class="toggle" type="checkbox" id="toggle-switch" aria-label="toggle discount">
     </label>
     <p>Yearly Billing</p>
     {#if window.innerWidth >= 1440}

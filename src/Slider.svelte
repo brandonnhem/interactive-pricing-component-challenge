@@ -95,7 +95,7 @@
 </style>
 
 <div class="rangeslider">
-    <label for="pricepermonth">
+    <label for="sliderRange">
         <input type="range" min="1" max="32" value="16" class="slider" id="sliderRange" on:input={handleSlide} aria-label="range slider">
     </label>
     <div class="price">
