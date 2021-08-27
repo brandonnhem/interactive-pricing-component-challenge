@@ -16,7 +16,7 @@
         font-weight: 800;
     }
 
-    h3 {
+    h2 {
         color: lightslategray;
         font-size: 15px;
         padding: 15px 26px;
@@ -40,7 +40,7 @@
             font-size: 2rem;
         }
 
-        h3 {
+        h2 {
             font-size: 1.28rem;
             font-weight: 600;
         }
@@ -55,7 +55,7 @@
 
 <header>
     <h1>Simple, traffic-based pricing</h1>
-    <h3>Sign-up for our 30-day trial. No credit card required.</h3>
+    <h2>Sign-up for our 30-day trial. No credit card required.</h2>
     <div class="background-circle">
         {@html background}
     </div>
